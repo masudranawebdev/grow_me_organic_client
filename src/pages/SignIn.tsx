@@ -11,8 +11,7 @@ import { useNavigate } from "react-router-dom";
 const SignIn = () => {
   const [loading, setLoading] = React.useState<boolean>(false);
   const router = useNavigate();
-  const isExist = localStorage.getItem("users");
-  console.log(isExist);
+  // const isExist = localStorage.getItem("users");
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     setLoading(true);
     event.preventDefault();
@@ -45,7 +44,7 @@ const SignIn = () => {
         <Typography component="h1" variant="h5">
           Your Information
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
             margin="normal"
             required
